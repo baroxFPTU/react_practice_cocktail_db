@@ -1,0 +1,30 @@
+.navbar {
+  background-color: #fff;
+  box-shadow: -2px -3px 20px 0px #aca8a833;
+}
+
+.navbarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbarLogo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.navbarLogoText {
+  color: rgb(2, 149, 100);
+}
+
+.navbarMenu {
+  display: flex;
+  column-gap: 25px;
+}
+
+.navbarLink:hover {
+  border-bottom: 3px solid rgb(2, 149, 100);
+}

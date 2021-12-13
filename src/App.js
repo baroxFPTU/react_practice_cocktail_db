@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+
+export const AppContext = createContext();
 
 function App() {
+  const onFilterChange = (filter) => {
+    console.log("filter changed:", filter);
+  };
+
+  const values = {
+    onFilterChange,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={values}>
+      <main className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+    </AppContext.Provider>
   );
 }
 
