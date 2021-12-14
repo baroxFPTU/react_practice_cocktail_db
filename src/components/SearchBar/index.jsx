@@ -1,16 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import {AppContext} from '../../App';
-import PropTypes from 'prop-types';
-
-SearchBar.propTypes = {
-  
-};
+import { AppContext } from '../../App';
 
 function SearchBar(props) {
   const [inputValue, setInputValue] = useState('');
   const {onFilterChange} = useContext(AppContext);
 
   useEffect(() => {
+    if (inputValue.trim() === '') {return }
     const timerId = setTimeout(() => {
       onFilterChange(inputValue);
     }, 300);
