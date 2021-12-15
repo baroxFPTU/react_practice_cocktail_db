@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import ListCocktail from '../components/ListCocktail';
-import { AppContext } from '../App';
+import { AppContext } from '../store';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 
 function Home(props) {

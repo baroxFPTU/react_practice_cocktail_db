@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom';
 import LoadingSkeleton from '../components/LoadingSkeleton';
+import CocktailArticle from '../components/CocktailArticle';
 
 function CocktailDetail(props) {
   const { id }= useParams();
@@ -14,14 +15,10 @@ function CocktailDetail(props) {
       setCocktail(newCocktail.drinks[0]);
     }
     getCocktailById();
-  }, []);
+  }, [id]);
 
   return (
-    <div>
-      {cocktail ? (
-        <span>{cocktail.strDrink}</span>
-      ): <LoadingSkeleton/>}
-    </div>
+   cocktail ? <CocktailArticle cocktail={cocktail}/> : <LoadingSkeleton/>
   );
 }
 

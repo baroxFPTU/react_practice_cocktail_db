@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { AppContext } from '../../App';
+import {AppContext} from '../../store';
 
 function SearchBar(props) {
   const [inputValue, setInputValue] = useState('');

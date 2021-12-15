@@ -1,0 +1,55 @@
+.cocktailDetailWrapper {
+  display: flex;
+  column-gap: 80px;
+  height: 90vh;
+  padding: 3rem 0px;
+}
+
+.leftContainer,
+.rightContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cocktailThumb {
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.cocktailThumb img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cocktailName {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.groupInfo {
+  display: flex;
+  column-gap: 25px;
+  padding: 10px;
+  border: 1px solid #019875;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.cocktailBack {
+  padding: 10px;
+  border: none;
+  background-color: #019875;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cocktailBack:hover {
+  opacity: 0.6;
+}
